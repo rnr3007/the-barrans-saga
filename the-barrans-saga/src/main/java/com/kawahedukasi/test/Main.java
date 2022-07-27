@@ -1,5 +1,8 @@
 package com.kawahedukasi.test;
 
+import com.kawahedukasi.test.constant.VillagerConstant;
+import com.kawahedukasi.test.faction.Villager;
+
 import java.util.*;
 
 public class Main {
@@ -43,8 +46,8 @@ public class Main {
         deathDataB.add(ageOfDeathVillagerB);
         deathDataB.add(yearOfDeathVillagerB);
 
-        villagerPair.put(Constant.VILLAGER_A, deathDataA);
-        villagerPair.put(Constant.VILLAGER_B, deathDataB);
+        villagerPair.put(VillagerConstant.VILLAGER_A, deathDataA);
+        villagerPair.put(VillagerConstant.VILLAGER_B, deathDataB);
 
         return villagerPair;
     }

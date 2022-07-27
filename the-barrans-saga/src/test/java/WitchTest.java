@@ -1,4 +1,4 @@
-import com.kawahedukasi.test.Witch;
+import com.kawahedukasi.test.faction.Witch;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
