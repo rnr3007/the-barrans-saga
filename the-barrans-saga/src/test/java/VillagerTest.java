@@ -1,3 +1,5 @@
+import com.kawahedukasi.test.Constant;
+import com.kawahedukasi.test.Villager;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
