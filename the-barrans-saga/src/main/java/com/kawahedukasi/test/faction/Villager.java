@@ -2,12 +2,13 @@ package com.kawahedukasi.test.faction;
 
 import com.kawahedukasi.test.constant.VillagerConstant;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
 public class Villager {
-    public Double saveVillageProgram(Map<String, List<Integer>> villagerPair){
+    public BigDecimal saveVillageProgram(Map<String, List<Integer>> villagerPair){
         Function<List<Integer>, Integer> bornYearCounter = (x) -> {
             int ageOfDead = x.get(0);
             int yearOfDead = x.get(1);
@@ -24,11 +25,13 @@ public class Villager {
 
         if (bornYearOfPersonA > -1 & bornYearOfPersonB > -1){
             Witch witch = new Witch();
-            Double killingAverage = (
-                    (witch.killingRule(bornYearOfPersonA) + witch.killingRule(bornYearOfPersonB)) / 2
-            );
+            BigDecimal killingRuleAtYearA = witch.killingRule(bornYearOfPersonA);
+            BigDecimal killingRuleAtYearB = witch.killingRule(bornYearOfPersonB);
+            BigDecimal totalKilling = killingRuleAtYearA.add(killingRuleAtYearB);
+            BigDecimal killingAverage = totalKilling.divide(BigDecimal.valueOf(2));
+
             return killingAverage;
         }
-        else return -1.0;
+        else return BigDecimal.valueOf(-1);
     }
 }

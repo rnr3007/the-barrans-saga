@@ -3,6 +3,7 @@ package com.kawahedukasi.test;
 import com.kawahedukasi.test.constant.VillagerConstant;
 import com.kawahedukasi.test.faction.Villager;
 
+import java.math.BigDecimal;
 import java.util.*;
 
 public class Main {
@@ -27,7 +28,7 @@ public class Main {
         );
 
         Villager villager = new Villager();
-        Double killAverage = villager.saveVillageProgram(villagerPair);
+        BigDecimal killAverage = villager.saveVillageProgram(villagerPair);
         System.out.println("\n\nKill average = " + killAverage);
     }
 
