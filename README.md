@@ -1,7 +1,7 @@
 # The Barrans Saga
 This repository is created to perform Kawah Edukasi screening test
 
-Created by Riva Nur Rahim, based on JDK 11.0.3 and Maven 3.8.5
+Created by Riva, based on JDK 11.0.3 and Maven 3.8.5
 
 
 # How to run
